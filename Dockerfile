@@ -16,5 +16,7 @@ RUN apt update && apt install -y wget unzip ca-certificates --no-install-recomme
     # install go
     && wget https://go.dev/dl/go1.18.linux-amd64.tar.gz -q\
     && rm -rf /usr/local/go && tar -C /usr/local -xzf go1.18.linux-amd64.tar.gz \
-    && rm -rf go1.18.linux-amd64.tar.gz
+    && rm -rf go1.18.linux-amd64.tar.gz \
+    %% apt clean \
+    && rm -rf /var/lib/apt/lists/*
 
