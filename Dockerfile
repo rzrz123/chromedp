@@ -10,7 +10,7 @@ RUN apt update && apt install -y wget unzip ca-certificates --no-install-recomme
     && apt install -y ./google-chrome-stable_current_amd64.deb --no-install-recommends\
     && rm -rf google-chrome-stable_current_amd64.deb \
     # install chrome driver
-    wget https://chromedriver.storage.googleapis.com/99.0.4844.51/chromedriver_linux64.zip \
+    && wget https://chromedriver.storage.googleapis.com/99.0.4844.51/chromedriver_linux64.zip \
     && unzip chromedriver_linux64.zip && mv chromedriver /usr/bin/chromedriver \
     && rm -rf chromedriver_linux64.zip \
     # install go
