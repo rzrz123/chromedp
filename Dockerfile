@@ -4,7 +4,7 @@ FROM ubuntu:latest
 ENV DEBIAN_FRONTEND=noninteractive TZ=US/central
 ENV PATH=$PATH:/usr/local/go/bin
 
-RUN apt update && apt install -y wget unzip --no-install-recommends\
+RUN apt update && apt install -y wget unzip ca-certificates --no-install-recommends\
     # install google chrome
     && wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
     && apt install -y ./google-chrome-stable_current_amd64.deb --no-install-recommends\
